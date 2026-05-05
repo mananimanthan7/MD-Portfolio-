@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: #3b82f6;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--foreground);
+  --color-accent: #8b5cf6;
+  --color-accent-foreground: #ffffff;
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --secondary: #f1f5f9;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --border: rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(0, 0, 0, 0.03);
+}
+
+.dark {
+  --background: #0d1117; /* GitHub Dark */
+  --foreground: #ffffff;
+  --secondary: #161b22;
+  --muted: #161b22;
+  --muted-foreground: #8b949e;
+  --border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slide-up {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Performance-friendly replacements for Glass effect */
+@utility glass {
+  background-color: var(--glass-bg);
+  border: 1px solid var(--border);
+}
+
+@utility glass-card {
+  background-color: var(--glass-bg);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: color-mix(in srgb, var(--glass-bg) 200%, transparent);
+    border-color: color-mix(in srgb, var(--border) 150%, transparent);
+    transform: translateY(-4px);
+  }
+}
+
+@utility section-padding {
+  padding-block: 6rem;
+  padding-inline: 1.5rem;
+  @media (min-width: 768px) {
+    padding-inline: 3rem;
+  }
+  @media (min-width: 1024px) {
+    padding-inline: 6rem;
+  }
+}
+
+@utility gradient-text {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #3b82f6, #8b5cf6);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 10px;
+}
