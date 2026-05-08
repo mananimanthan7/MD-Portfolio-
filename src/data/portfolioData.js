@@ -73,12 +73,12 @@ export const portfolioData = {
   ],
   education: [
     {
-      degree: "MCA (Master of Computer Applications)",
+      degree: "M.C.A.",
       institution: "Parul University",
       status: "Pursuing",
     },
     {
-      degree: "BCA (Bachelor of Computer Applications)",
+      degree: "B.C.A.",
       institution: "College",
       score: "8.16 CGPA",
     },
