@@ -31,7 +31,7 @@ export default function Skills() {
   return (
     <section id="skills" className="section-padding relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-primary/5 rounded-full blur-[120px] -z-10" />
-      
+
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center mb-16">
           <motion.h2

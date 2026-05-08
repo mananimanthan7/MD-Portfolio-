@@ -5,7 +5,7 @@ import { portfolioData } from '../data/portfolioData';
 
 export default function Experience() {
   return (
-    <section id="experience" className="section-padding bg-white/5">
+    <section id="experience" className="section-padding bg-foreground/5">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center mb-16">
           <motion.h2
@@ -26,7 +26,7 @@ export default function Experience() {
 
         <div className="relative max-w-3xl mx-auto">
           {/* Vertical Line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2 hidden md:block" />
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-foreground/10 -translate-x-1/2 hidden md:block" />
 
           <div className="space-y-12">
             {portfolioData.experience.map((exp, idx) => (
@@ -55,7 +55,7 @@ export default function Experience() {
                       <h3 className="text-2xl font-bold mb-1 group-hover:text-primary transition-colors">
                         {exp.role}
                       </h3>
-                      <div className="text-lg font-medium text-white/80 mb-4">{exp.company}</div>
+                      <div className="text-lg font-medium text-foreground/80 mb-4">{exp.company}</div>
                       <p className="text-muted-foreground leading-relaxed">
                         {exp.description}
                       </p>

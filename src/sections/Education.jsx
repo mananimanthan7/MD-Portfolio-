@@ -46,7 +46,7 @@ export default function Education() {
                       </div>
                    )}
                 </div>
-                <p className="text-lg text-white/70 mb-1">{edu.institution}</p>
+                <p className="text-lg text-foreground/70 mb-1">{edu.institution}</p>
                 {edu.status && (
                     <span className="text-xs uppercase tracking-widest font-bold text-primary">{edu.status}</span>
                 )}

@@ -66,9 +66,9 @@ export const portfolioData = {
   experience: [
     {
       company: "Excelsior Technology",
-      role: "Frontend Developer",
+      role: "Full Stack Developer",
       duration: "Aug 2025 – Present",
-      description: "Working on frontend development using React and building high-quality UI components.",
+      description: "Working as a Full Stack Developer, building robust web applications using React, Node.js, and modern database systems.",
     },
   ],
   education: [
