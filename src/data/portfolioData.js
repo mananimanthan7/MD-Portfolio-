@@ -43,7 +43,7 @@ export const portfolioData = {
       description: "An elegant, responsive business website for a beauty parlour.",
       tech: ["React", "Vercel", "Responsive"],
       image: iKhodalImg,
-      live: "https://i-khodal-beauty-parlour.vercel.app/",
+      live: "https://i-khodal-beauty-parlourr.vercel.app/",
       github: "https://github.com/mananimanthan7",
     },
     {
